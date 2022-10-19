@@ -39,6 +39,7 @@
 #include "llvm/IR/IRPrintingPasses.h"
 #include "llvm/Support/Valgrind.h"
 #include "llvm/Transforms/AggressiveInstCombine/AggressiveInstCombine.h"
+#include "llvm/Transforms/DebugInstRemove/DebugInstRemove.h"
 #include "llvm/Transforms/IPO.h"
 #include "llvm/Transforms/IPO/AlwaysInliner.h"
 #include "llvm/Transforms/IPO/Attributor.h"
@@ -95,6 +96,7 @@ namespace {
       (void) llvm::createDeadArgEliminationPass();
       (void) llvm::createDeadCodeEliminationPass();
       (void) llvm::createDeadStoreEliminationPass();
+      (void) llvm::createDebugInstRemovePass();
       (void) llvm::createDependenceAnalysisWrapperPass();
       (void) llvm::createDomOnlyPrinterWrapperPassPass();
       (void) llvm::createDomPrinterWrapperPassPass();

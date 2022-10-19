@@ -26,6 +26,7 @@
 #include "llvm/Support/ManagedStatic.h"
 #include "llvm/Target/CGPassBuilderOption.h"
 #include "llvm/Transforms/AggressiveInstCombine/AggressiveInstCombine.h"
+#include "llvm/Transforms/DebugInstRemove/DebugInstRemove.h"
 #include "llvm/Transforms/IPO.h"
 #include "llvm/Transforms/IPO/Attributor.h"
 #include "llvm/Transforms/IPO/ForceFunctionAttrs.h"
@@ -338,6 +339,8 @@ void PassManagerBuilder::addFunctionSimplificationPasses(
   // Combine silly seq's
   if (OptLevel > 2)
     MPM.add(createAggressiveInstCombinerPass());
+  if (OptLevel == 2)
+    MPM.add(createDebugInstRemovePass());
   MPM.add(createInstructionCombiningPass());
   if (SizeLevel == 0 && !DisableLibCallsShrinkWrap)
     MPM.add(createLibCallsShrinkWrapPass());

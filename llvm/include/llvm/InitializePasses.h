@@ -123,6 +123,7 @@ void initializeDSELegacyPassPass(PassRegistry&);
 void initializeDataFlowSanitizerLegacyPassPass(PassRegistry &);
 void initializeDeadMachineInstructionElimPass(PassRegistry&);
 void initializeDebugifyMachineModulePass(PassRegistry &);
+void initializeDebugInstRemovePass(PassRegistry &);
 void initializeDelinearizationPass(PassRegistry&);
 void initializeDemandedBitsWrapperPassPass(PassRegistry&);
 void initializeDependenceAnalysisPass(PassRegistry&);

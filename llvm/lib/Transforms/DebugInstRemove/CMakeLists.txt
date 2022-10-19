@@ -1,4 +1,4 @@
-add_llvm_library( LLVMDebugInstRemove MODULE
+add_llvm_library( LLVMDebugInstRemove
   DebugInstRemove.cpp
 
   PLUGIN_TOOL

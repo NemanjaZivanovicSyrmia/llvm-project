@@ -15,6 +15,7 @@ add_llvm_component_library(LLVMLTO
 
   LINK_COMPONENTS
   AggressiveInstCombine
+  DebugInstRemove
   Analysis
   BinaryFormat
   BitReader

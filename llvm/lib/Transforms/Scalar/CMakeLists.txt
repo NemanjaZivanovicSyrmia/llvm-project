@@ -93,6 +93,7 @@ add_llvm_component_library(LLVMScalarOpts
   AggressiveInstCombine
   Analysis
   Core
+  DebugInstRemove
   InstCombine
   Support
   TransformUtils

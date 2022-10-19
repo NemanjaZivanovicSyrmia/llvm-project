@@ -5,6 +5,7 @@ set( LLVM_LINK_COMPONENTS
   Core
   IPO
   AggressiveInstCombine
+  DebugInstRemove
   InstCombine
   Instrumentation
   MC

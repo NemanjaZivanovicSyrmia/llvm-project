@@ -11,6 +11,7 @@ set(LLVM_LINK_COMPONENTS
   IPO
   IRReader
   AggressiveInstCombine
+  DebugInstRemove
   InstCombine
   Instrumentation
   LTO
